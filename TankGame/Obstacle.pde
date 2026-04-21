@@ -8,21 +8,20 @@ class Obstacle {
     this.y = y;
     w = 75;
     h = 75;
-    speed = 5;
+    speed = 2;
     health = 100;
-    // t1W = loadImage("TankW.png");
+    obstl1 = loadImage("Asteriod.png");
   }
 
   void display() {
-    rectMode(CENTER);
-    fill(127);
-    rect(x, y, w, h);
+    imageMode(CENTER);
+    image(obstl1, x, y);
   }
 
   void move() {
-        x = x + speed;
-        if(x > width) {
-          x = 0;
-        }
+    x = x + speed;
+    if (x > width) {
+      x = 0;
+    }
   }
 }
