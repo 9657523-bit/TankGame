@@ -2,6 +2,7 @@ class Tank {
   int x, y, w, h, speed, health;
   PImage t1W, t2A, t3S, t4D;
   char idir;
+int turretCount, laserCount;
 
   // Constructor
   Tank() {
@@ -16,6 +17,8 @@ class Tank {
     t3S = loadImage("TankS.png");
     t4D = loadImage("TankD.png");
     idir = 'w';
+    turretCount = 1;
+    laserCount = 100;
   }
 
   void display() {
@@ -45,5 +48,5 @@ class Tank {
       idir = 'd';
       x = x + speed;
     }
-  }
+  } 
 }
